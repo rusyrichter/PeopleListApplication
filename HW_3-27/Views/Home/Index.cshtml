@@ -1,0 +1,35 @@
+﻿@using HW_3_27.Models
+@using PeopelListData;
+@model PeopleViewModel
+
+<div b-ud2x8zyu5z class="container">
+    <main b-ud2x8zyu5z role="main" class="pb-3">
+        <div class="row">
+            <div class="col-md-12">
+                <a href="/home/add" class="btn btn-success">Add People</a>
+                <table class="table table-hover table-bordered">
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Age</th>
+                    </tr>
+                    @foreach(People p in Model.people)
+                    {
+                        <tr>
+                            <th>@p.FirstName</th>
+                            <th>@p.LastName</th>
+                            <th>@p.Age</th>
+                        </tr>
+                    }
+
+                   
+                </table>
+            </div>
+        </div>
+       </main>
+      </div>
+ <script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/js/site.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/js/peoplelist.js"></script>
+
